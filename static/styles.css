@@ -1,0 +1,184 @@
+.stApp {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.chat-message {
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-message {
+    background-color: #e6f3ff;
+}
+
+.assistant-message {
+    background-color: #f0f2f6;
+}
+
+.clear-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+}
+
+/* API Key form styling */
+[data-testid="stForm"] {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border: 1px solid #e1e4e8;
+    width: 100%;
+}
+
+/* Custom styling for input container */
+.stTextInput > div {
+    position: relative;
+    width: 100%;
+}
+
+.stTextInput > div > div {
+    background-color: white !important;
+    border-radius: 8px !important;
+    border: 1px solid #e1e4e8 !important;
+    padding: 8px 12px !important;
+    box-shadow: none !important;
+    position: relative !important;
+    z-index: 1 !important;
+    width: 100% !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+/* Fix input width and padding */
+.stTextInput > div > div > input {
+    color: #24292e !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+    background-color: transparent !important;
+    padding-right: 35px !important;
+    width: 100% !important;
+    box-sizing: border-box !important;
+    margin: 0 !important;
+    border: none !important;
+}
+
+.stTextInput > div > div:hover,
+.stTextInput > div > div:focus-within {
+    border-color: #0366d6 !important;
+    box-shadow: 0 0 0 3px rgba(3,102,214,0.1) !important;
+}
+
+.stTextInput > div > div > input::placeholder {
+    color: #6a737d !important;
+}
+
+/* Hide password toggle button */
+button[title="View password"] {
+    z-index: 2 !important;
+    position: absolute !important;
+    right: 8px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    background: transparent !important;
+    border: none !important;
+    padding: 4px !important;
+    margin: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: 24px !important;
+    height: 24px !important;
+}
+
+/* Form button styling */
+.stButton > button {
+    width: auto !important;
+    margin-top: 0.5rem;
+    background-color: #0366d6;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+}
+
+.stButton > button:hover {
+    background-color: #0256b9;
+}
+
+/* Hide default streamlit branding */
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+
+/* Ensure the input field spans the width */
+.stTextInput {
+    width: 100%;
+}
+
+.stTextInput > div {
+    width: 100%;
+}
+
+/* Add some spacing around the input */
+.element-container:has(.stTextInput) {
+    padding: 0.5rem 0;
+}
+
+/* Loading animation */
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.loading-spinner {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: #0366d6;
+    border-radius: 50%;
+    display: inline-block;
+    animation: loading 1s infinite ease-in-out;
+}
+
+.loading-spinner:nth-child(1) { animation-delay: 0s; }
+.loading-spinner:nth-child(2) { animation-delay: 0.2s; }
+.loading-spinner:nth-child(3) { animation-delay: 0.4s; }
+
+@keyframes loading {
+    0%, 100% { transform: scale(0.3); opacity: 0.3; }
+    50% { transform: scale(1); opacity: 1; }
+}
+
+/* Help text styling */
+.stTextInput > div > .help {
+    margin-top: 0.25rem !important;
+    font-size: 12px !important;
+    color: #6a737d !important;
+    position: relative !important;
+    z-index: 0 !important;
+}
+
+/* Container width fix */
+.element-container,
+.stTextInput,
+.stTextInput > div {
+    width: 100% !important;
+}
+
+div[data-baseweb="input"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+div[data-baseweb="base-input"] {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+} 

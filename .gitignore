@@ -1,0 +1,11 @@
+*vEnv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pyw
+*.pyz
+.env
+*pdf
+data
+LICENSE

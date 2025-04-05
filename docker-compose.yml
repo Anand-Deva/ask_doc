@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  document-chat:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+      - /app/venv  # Exclude virtual environment from mounting
+      - uploads:/app/uploads  # Persistent volume for uploads
+      - temp:/app/temp  # Persistent volume for temporary files
+    environment:
+      - PYTHONUNBUFFERED=1
+      - PYTHONDONTWRITEBYTECODE=1
+      - TEMP_UPLOAD_DIR=/app/temp
+    healthcheck:
+      test: ["CMD", "curl", "--fail", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    restart: unless-stopped
+
+volumes:
+  uploads:  # Define persistent volume for uploads
+  temp:     # Define persistent volume for temporary files 
