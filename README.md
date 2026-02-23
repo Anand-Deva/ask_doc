@@ -1,6 +1,6 @@
 # Document Chat Assistant
 
-A Streamlit-based application that allows users to upload PDF documents and ask questions about their content using OpenAI's GPT models. The application provides a clean, modern interface for document interaction with real-time streaming responses.
+A Streamlit-based application that allows users to upload PDF documents and ask questions about their content using OpenAI's GPT models. The application provides a clean, modern interface for document interaction with real-time streaming responses. This application is developed entirely by vibe coding.
 
 ## Features
 
